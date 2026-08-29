@@ -1,5 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head><title>My Homepage</title></head>
-<body><h1>Hello, World!</h1></body>
+<head>
+    <title>AquaCW24 Homepage</title>
+    <meta title="Homepage">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="AquaCW24 Webpage">
+    <meta name="discription" content="AquaCW24 Webpage">
+    <meta http-equiv="content-security-policy">
+    <meta name="copyright" content="Che-Wen Kuo">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" /> -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const cursor = document.querySelector('.cursor');
+            const cursorDot = document.querySelector('.cursor-dot');
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = e.clientX - 10 + 'px';
+            cursor.style.top = e.clientY - 10 + 'px';
+            cursorDot.style.left = e.clientX - 2 + 'px';
+            cursorDot.style.top = e.clientY - 2 + 'px';
+        });
+
+        document.addEventListener('click', () => {
+            cursor.style.transform = 'scale(0.8)';
+            setTimeout(() => {
+                cursor.style.transform = 'scale(1)';
+            }, 100);
+        });
+
+        document.addEventListener('mousedown', () => {
+            cursor.style.transform = 'scale(0.8)';
+        });
+
+        document.addEventListener('mouseup', () => {
+            cursor.style.transform = 'scale(1)';
+        });
+    });
+    </script>
+    <h1>This is a test webpage</h1>
+</body>
 </html>
